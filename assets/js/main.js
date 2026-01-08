@@ -503,7 +503,7 @@ function bookATable() {
   }
 
   const errorDiv = form.querySelector(".error-message");
-  
+
   if (!isValid) {
     if (errorDiv) {
       errorDiv.textContent = errors.join(", ");
@@ -528,7 +528,7 @@ const form = document.getElementById("book-a-table-form");
 if (form) {
   form.addEventListener("submit", function (e) {
     e.preventDefault();
-    if(bookATable()) {
+    if (bookATable()) {
       form.reset();
     }
   });
@@ -628,7 +628,7 @@ const contact = document.getElementById("contact-form");
 if (contact) {
   contact.addEventListener("submit", function (e) {
     e.preventDefault();
-    if(contactForm()) {
+    if (contactForm()) {
       contact.reset();
     }
   });
@@ -637,21 +637,21 @@ if (contact) {
 // Easter Egg
 
 function createRollingEgg() {
-  const egg = document.createElement('div');
-  egg.className = 'rolling-egg';
+  const egg = document.createElement("div");
+  egg.className = "rolling-egg";
   egg.innerHTML = '<i class="bi bi-egg-fill"></i>';
-  
-  const randomTop = Math.random() * 70 + 10;
-  egg.style.top = randomTop + '%';
 
-  egg.style.left = '-50px';
+  const randomTop = Math.random() * 70 + 10;
+  egg.style.top = randomTop + "%";
+
+  egg.style.left = "-50px";
   document.body.appendChild(egg);
-  
+
   setTimeout(() => {
-    egg.style.left = 'calc(100% + 50px)';
-    egg.style.transition = 'left 3s linear';
+    egg.style.left = "calc(100% + 50px)";
+    egg.style.transition = "left 3s linear";
   }, 10);
-  
+
   setTimeout(() => {
     if (egg.parentNode) {
       egg.parentNode.removeChild(egg);
