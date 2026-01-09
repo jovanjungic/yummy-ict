@@ -659,4 +659,4 @@ function createRollingEgg() {
   }, 3010);
 }
 
-let egg = setInterval(createRollingEgg, 8000);
+let egg = setInterval(createRollingEgg, 10000);
